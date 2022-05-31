@@ -51,5 +51,15 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be("IV");
         }
+
+        [Test]
+        public void convert_five_to_V()
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(5);
+
+            romanNumeral.Should().Be("V");
+        }
     }
 }

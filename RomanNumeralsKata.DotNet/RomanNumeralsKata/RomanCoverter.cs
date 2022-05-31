@@ -3,6 +3,8 @@
     public class RomanCoverter
     {
         public string Convert(int number) {
+            if (number == 5)
+                return "V";
             if (number == 4)
                 return "IV";
             if (number > 0)
