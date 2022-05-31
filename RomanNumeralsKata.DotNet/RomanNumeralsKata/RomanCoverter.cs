@@ -6,8 +6,9 @@ namespace RomanNumeralsKata
     public class RomanCoverter
     {
         private static readonly Dictionary<int, string> arabicToRomanSymbols = new() {
+            {40, "XL"},
             {10, "X"},
-            {9, "IX"},
+            { 9, "IX"},
             {5, "V"},
             {4, "IV"},
             {1, "I"},
