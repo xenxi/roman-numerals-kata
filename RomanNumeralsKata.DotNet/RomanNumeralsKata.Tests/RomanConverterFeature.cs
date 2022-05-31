@@ -39,5 +39,22 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be(expectedRomanNumeral);
         }
+        [TestCase(100, "C")]
+        [TestCase(200, "CC")]
+        [TestCase(300, "CCC")]
+        [TestCase(400, "CD")]
+        [TestCase(500, "D")]
+        [TestCase(600, "DC")]
+        [TestCase(700, "DCC")]
+        [TestCase(800, "DCCC")]
+        [TestCase(900, "CM")]
+        public void convert_hundreds(int number, string expectedRomanNumeral)
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(number);
+
+            romanNumeral.Should().Be(expectedRomanNumeral);
+        }
     }
 }
