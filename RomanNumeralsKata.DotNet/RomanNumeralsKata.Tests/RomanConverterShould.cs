@@ -5,6 +5,7 @@ namespace RomanNumeralsKata.Tests
 {
     public class RomanConverterShould
     {
+
         [Test]
         public void convert_zero_to_a_empty_string() {
             var converter = new RomanCoverter();
@@ -60,6 +61,19 @@ namespace RomanNumeralsKata.Tests
             var romanNumeral = converter.Convert(5);
 
             romanNumeral.Should().Be("V");
+        }
+        [TestCase(1, "I")]
+        [TestCase(2, "II")]
+        [TestCase(3, "III")]
+        [TestCase(4, "IV")]
+        [TestCase(5, "V")]
+        public void convert_number(int number, string expectedSymbol)
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(number);
+
+            romanNumeral.Should().Be(expectedSymbol);
         }
     }
 }
