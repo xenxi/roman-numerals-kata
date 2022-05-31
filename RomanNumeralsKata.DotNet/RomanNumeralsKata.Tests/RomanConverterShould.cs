@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentAssertions;
+using NUnit.Framework;
 
 namespace RomanNumeralsKata.Tests
 {
     public class RomanConverterShould
     {
+        [Test]
+        public void convert_zero_to_a_empty_string() {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(0);
+
+            romanNumeral.Should().Be(string.Empty);
+        }
     }
 }
