@@ -11,9 +11,10 @@ namespace RomanNumeralsKata
             {1, "I"},
         };
         public string Convert(int number) {
-            var closestSymbol = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
-            if (number >= 1)
+            if (number >= 1) {
+                var closestSymbol = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
                 return closestSymbol.Value + Convert(number - closestSymbol.Key);
+            }
 
             return string.Empty;
         }
