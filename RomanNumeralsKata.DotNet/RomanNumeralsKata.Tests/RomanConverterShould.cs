@@ -23,5 +23,15 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be("I");
         }
+
+        [Test]
+        public void convert_two_to_II()
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(2);
+
+            romanNumeral.Should().Be("II");
+        }
     }
 }
