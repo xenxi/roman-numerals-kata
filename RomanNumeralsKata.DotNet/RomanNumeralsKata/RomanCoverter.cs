@@ -12,10 +12,6 @@ namespace RomanNumeralsKata
         };
         public string Convert(int number) {
             var closestSymbol = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
-            if (number >= 5)
-                return closestSymbol.Value + Convert(number - closestSymbol.Key);
-            if (number >= 4)
-                return closestSymbol.Value + Convert(number - closestSymbol.Key);
             if (number >= 1)
                 return closestSymbol.Value + Convert(number - closestSymbol.Key);
 
