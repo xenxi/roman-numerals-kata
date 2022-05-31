@@ -22,6 +22,22 @@ namespace RomanNumeralsKata.Tests
             romanNumeral.Should().Be(expectedRomanNumeral);
         }
 
+        [TestCase(10, "X")]
+        [TestCase(20, "XX")]
+        [TestCase(30, "XXX")]
+        [TestCase(40, "XL")]
+        [TestCase(50, "L")]
+        [TestCase(60, "LX")]
+        [TestCase(70, "LXX")]
+        [TestCase(80, "LXXX")]
+        [TestCase(90, "XC")]
+        public void convert_tens(int number, string expectedRomanNumeral)
+        {
+            var converter = new RomanCoverter();
 
+            var romanNumeral = converter.Convert(number);
+
+            romanNumeral.Should().Be(expectedRomanNumeral);
+        }
     }
 }
