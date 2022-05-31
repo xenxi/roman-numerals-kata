@@ -11,6 +11,7 @@ namespace RomanNumeralsKata.Tests
         [TestCase(4, "IV")]
         [TestCase(5, "V")]
         [TestCase(9, "IX")]
+        [TestCase(10, "X")]
         public void convert_number(int number, string expectedSymbol)
         {
             var converter = new RomanCoverter();
