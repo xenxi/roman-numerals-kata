@@ -18,7 +18,7 @@ namespace RomanNumeralsKata
         }
 
         private static (int symbolValue, string symbol) FindClosestSymbol(int number) {
-            var (symbolValue, symbol) = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
+            var (symbolValue, symbol) = arabicToRomanSymbols.First(x => x.Key <= number);
             return (symbolValue, symbol);
         }
     }
