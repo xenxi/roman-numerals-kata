@@ -13,5 +13,15 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be(string.Empty);
         }
+
+        [Test]
+        public void convert_one_to_I()
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(1);
+
+            romanNumeral.Should().Be("I");
+        }
     }
 }
