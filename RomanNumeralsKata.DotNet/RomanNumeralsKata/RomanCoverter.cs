@@ -5,7 +5,7 @@ namespace RomanNumeralsKata
 {
     public class RomanCoverter
     {
-        private static readonly List<Symbol> arabicToRomanSymbols = new() {
+        public static readonly List<Symbol> arabicToRomanSymbols = new() {
             new Symbol(900, "CM"),
             new Symbol(500, "D"),
             new Symbol( 400, "CD"),
@@ -22,12 +22,8 @@ namespace RomanNumeralsKata
         public string Convert(int number) {
             if (number < 1) return string.Empty;
 
-            var symbol = FindClosestSymbol(number, new Symbols());
+            var symbol = new Symbols().FindClosestSymbol(number);
             return symbol.Roman + Convert(number - symbol.Arabic);
-        }
-
-        public static Symbol FindClosestSymbol(int number, Symbols tmp) {
-            return arabicToRomanSymbols.First(x => x.Arabic <= number);
         }
     }
 }

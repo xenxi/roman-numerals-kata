@@ -1,3 +1,9 @@
-﻿namespace RomanNumeralsKata;
+﻿using System.Linq;
 
-public class Symbols { }
+namespace RomanNumeralsKata;
+
+public class Symbols {
+    public Symbol FindClosestSymbol(int number) {
+        return RomanCoverter.arabicToRomanSymbols.First(x => x.Arabic <= number);
+    }
+}
