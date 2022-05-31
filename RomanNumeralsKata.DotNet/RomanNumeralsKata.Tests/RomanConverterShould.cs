@@ -42,5 +42,14 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be("III");
         }
+        [Test]
+        public void convert_four_to_IV()
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(4);
+
+            romanNumeral.Should().Be("IV");
+        }
     }
 }
