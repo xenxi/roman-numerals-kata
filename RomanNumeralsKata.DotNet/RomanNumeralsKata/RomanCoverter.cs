@@ -22,11 +22,11 @@ namespace RomanNumeralsKata
         public string Convert(int number) {
             if (number < 1) return string.Empty;
 
-            var symbol = FindClosestSymbol(number);
+            var symbol = FindClosestSymbol(number, new Symbols());
             return symbol.Roman + Convert(number - symbol.Arabic);
         }
 
-        private static Symbol FindClosestSymbol(int number) {
+        public static Symbol FindClosestSymbol(int number, Symbols tmp) {
             return arabicToRomanSymbols.First(x => x.Arabic <= number);
         }
     }
