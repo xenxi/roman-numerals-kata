@@ -33,5 +33,14 @@ namespace RomanNumeralsKata.Tests
 
             romanNumeral.Should().Be("II");
         }
+        [Test]
+        public void convert_three_to_III()
+        {
+            var converter = new RomanCoverter();
+
+            var romanNumeral = converter.Convert(3);
+
+            romanNumeral.Should().Be("III");
+        }
     }
 }
