@@ -13,12 +13,12 @@ namespace RomanNumeralsKata
         public string Convert(int number) {
             if (number < 1) return string.Empty;
 
-            var (symbolValue, symbol) = FinClosestSymbol(number);
+            var (symbolValue, symbol) = FindClosestSymbol(number);
             return symbol + Convert(number - symbolValue);
         }
 
-        private static (int symbolValue, string symbol) FinClosestSymbol(int number) {
-             var (symbolValue, symbol) = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
+        private static (int symbolValue, string symbol) FindClosestSymbol(int number) {
+            var (symbolValue, symbol) = arabicToRomanSymbols.FirstOrDefault(x => x.Key <= number);
             return (symbolValue, symbol);
         }
     }
