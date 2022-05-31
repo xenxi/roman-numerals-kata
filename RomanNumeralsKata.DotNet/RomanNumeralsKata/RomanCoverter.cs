@@ -4,9 +4,9 @@
     {
         public string Convert(int number) {
             if (number == 5)
-                return "V";
+                return "V" + Convert(0);
             if (number == 4)
-                return "IV";
+                return "IV" + Convert(0);
             if (number > 0)
                 return "I" + Convert(number - 1);
 
