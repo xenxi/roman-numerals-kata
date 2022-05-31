@@ -18,6 +18,7 @@ namespace RomanNumeralsKata.Tests
         [TestCase(100, "C")]
         [TestCase(400, "CD")]
         [TestCase(500, "D")]
+        [TestCase(900, "CM")]
         public void convert_number(int number, string expectedSymbol)
         {
             var converter = new RomanCoverter();
